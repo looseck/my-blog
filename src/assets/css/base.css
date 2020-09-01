@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body {
+  font-family: "Meslo LG",'Helvetica',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #42b983;
+}
