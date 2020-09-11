@@ -19,16 +19,6 @@
 <script>
 // 网络请求
 import { request } from "@/network/request.js";
-import Vue from "vue";
-
-// 过滤器
-Vue.filter("capitalize", function (value) {
-  if (value) {
-    // 过滤器业务逻辑
-    value = value.toString();
-    return value.split("T")[0];
-  }
-});
 
 export default {
   name: "Article",
@@ -45,7 +35,6 @@ export default {
     async getPost() {
       const id = this.$route.params.id;
       this.data = await request("/article/" + id);
-      console.log(this.data);
     },
   },
 };

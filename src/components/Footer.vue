@@ -13,7 +13,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 #footer {
   width: 100%;
   position: absolute;

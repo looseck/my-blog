@@ -17,12 +17,12 @@ export default {
   },
   methods: {
     async getCategory() {
-      let res = await request("/category");
+      const res = await request("/category");
       console.log(res);
     },
   },
 };
-</script>
+</script scoped>
 
 <style>
 </style>

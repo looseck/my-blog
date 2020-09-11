@@ -1,3 +1,10 @@
+// vue.config.js
+const prodOptions = {}
+if (process.env.NODE_ENV === 'production') {
+  prodOptions.publicPath = './'
+  prodOptions.outputDir = 'dist'
+}
+
 module.exports = {
   // 跨域问题解决
   devServer: {
@@ -10,5 +17,8 @@ module.exports = {
         }
       }
     }
-  }
+  },
+  // 选项...
+  publicPath: prodOptions.publicPath,
+  outputDir: prodOptions.outputDir
 }

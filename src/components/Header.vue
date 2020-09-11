@@ -17,7 +17,7 @@
         <router-link to="/document" class="menu-item-router">文档</router-link>
       </div>
       <div>
-        <router-link to="/document" class="menu-item-router">归档</router-link>
+        <router-link to="#" class="menu-item-router">归档</router-link>
       </div>
       <div>
         <router-link to="/about" class="menu-item-router">关于</router-link>
@@ -80,7 +80,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #header {
   height: 50px;
   user-select: none;

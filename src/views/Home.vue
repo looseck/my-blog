@@ -19,7 +19,7 @@
             <time>{{item.update_time | capitalize}}</time>
           </div>
           <span class="meta-title">
-            <a :href="'/article/'+item.id" @click="getPost(item.id)">{{item.title}}</a>
+            <a href="#" @click.prevent="getPost(item.id)">{{item.title}}</a>
           </span>
         </li>
       </ul>
@@ -31,14 +31,6 @@
 // @ is an alias to /src
 // 网络请求
 import { request } from "@/network/request.js";
-import Vue from "vue";
-
-// 过滤器
-Vue.filter("capitalize", function (value) {
-  // 过滤器业务逻辑
-  value = value.toString();
-  return value.split("T")[0];
-});
 
 export default {
   name: "Home",
@@ -56,16 +48,15 @@ export default {
       let res = await request("/article");
       this.data = res.result;
     },
-    // 根据 id 取文章
+    // 根据 id 去对应文章页面
     async getPost(id) {
-      let a = await request("/article/" + id);
-      console.log(a);
+      this.$router.push("/article/" + id);
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .about > p {
   font-size: 14px;
   height: 24px;

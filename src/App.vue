@@ -26,7 +26,6 @@ export default {
 /* 引入公共样式 */
 @import "./assets/css/base.css";
 #app {
-  border-top: 2px solid #383838;
   height: 100%;
   box-sizing: border-box;
 }

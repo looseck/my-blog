@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .about > p {
   font-size: 14px;
   height: 24px;
